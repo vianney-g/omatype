@@ -1,6 +1,11 @@
 # omatype
 
-![omatype showing a finished test](docs/result.png)
+> **Work in progress.** omatype is an early draft: it works and keeps your
+> history, but expect rough edges, missing features, and changes to the stats
+> and the database between versions. There is no release or package in
+> Omarchy's repositories yet; build it from source.
+
+![omatype during a test](docs/typing.png)
 
 A typing trainer for [Omarchy](https://omarchy.org) that keeps every keystroke
 and turns them into stats. It runs offline, follows the Omarchy theme live
@@ -16,7 +21,11 @@ and turns them into stats. It runs offline, follows the Omarchy theme live
   bests for each kind of test, the keys you miss most, and every past test,
   graph included.
 
+![The result of a test](docs/result.png)
+
 ![History and stats](docs/history.png)
+
+Screenshots use made-up practice data.
 
 ## Keys
 
