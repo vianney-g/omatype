@@ -1,0 +1,18 @@
+<RCC>
+    <qresource prefix="/">
+        <file alias="ChartTip.qml">ChartTip.qml</file>
+        <file alias="CommandPalette.qml">CommandPalette.qml</file>
+        <file alias="ConfigBar.qml">ConfigBar.qml</file>
+        <file alias="HelpOverlay.qml">HelpOverlay.qml</file>
+        <file alias="HistoryView.qml">HistoryView.qml</file>
+        <file alias="Main.qml">Main.qml</file>
+        <file alias="ProgressChart.qml">ProgressChart.qml</file>
+        <file alias="ResultView.qml">ResultView.qml</file>
+        <file alias="SpeedChart.qml">SpeedChart.qml</file>
+        <file alias="StatBlock.qml">StatBlock.qml</file>
+        <file alias="TypingView.qml">TypingView.qml</file>
+        <file alias="format.js">format.js</file>
+        <file alias="i18n/en.json">i18n/en.json</file>
+        <file alias="i18n/fr.json">i18n/fr.json</file>
+    </qresource>
+</RCC>

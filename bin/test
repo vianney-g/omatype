@@ -1,0 +1,13 @@
+#!/bin/sh
+set -eu
+
+ROOT="$(CDPATH= cd -- "$(dirname -- "$0")/.." && pwd)"
+
+# The engine's own tests: rules, stats, and the history store.
+cargo test --locked --manifest-path "$ROOT/engine/Cargo.toml" --target-dir "$ROOT/build/engine"
+
+mkdir -p "$ROOT/build/tests"
+cd "$ROOT/build/tests"
+qmake6 "$ROOT/tests/omatype_tests.pro"
+make -j"$(nproc)"
+QT_QPA_PLATFORM=offscreen ./omatype_tests

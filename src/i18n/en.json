@@ -1,0 +1,6 @@
+{
+  "%n errors": { "one": "%n error", "other": "%n errors" },
+  "%n tests": { "one": "%n test", "other": "%n tests" },
+  "Last %n tests": { "one": "Last test", "other": "Last %n tests" },
+  "%n runs": { "one": "%n run", "other": "%n runs" }
+}

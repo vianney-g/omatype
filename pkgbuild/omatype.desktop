@@ -1,0 +1,13 @@
+[Desktop Entry]
+Type=Application
+Name=Omatype
+Name[fr]=Omatype
+Comment=Typing practice with detailed stats
+Comment[fr]=Entraînement à la frappe avec statistiques détaillées
+Exec=omatype
+Icon=omatype
+Terminal=false
+Categories=Education;Utility;
+Keywords=typing;keyboard;wpm;speed;
+Keywords[fr]=frappe;dactylographie;clavier;vitesse;
+StartupWMClass=omatype
