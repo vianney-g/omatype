@@ -100,7 +100,9 @@ Item {
         Flow {
             id: flow
             width: box.width
-            spacing: view.charWidth
+            // No spacing: Flow would put it between lines too, pushing the
+            // third line out of view. Each word carries its own space instead.
+            spacing: 0
             y: -Math.max(0, box.currentLine - 1) * view.lineHeight
             Behavior on y { NumberAnimation { duration: 140; easing.type: Easing.OutCubic } }
 
@@ -113,6 +115,7 @@ Item {
                     required property string typed
                     readonly property bool isCurrent: index === backend.current
                     height: view.lineHeight
+                    rightPadding: view.charWidth
                     verticalAlignment: Text.AlignVCenter
                     textFormat: Text.StyledText
                     font: metrics.font
@@ -133,8 +136,11 @@ Item {
                         color: theme.accent
                         opacity: box.caretOpacity
                         anchors.verticalCenter: parent.verticalCenter
-                        x: backend.caret * view.charWidth - 1
-                        Behavior on x { enabled: backend.started; NumberAnimation { duration: 60 } }
+                        // Only the current word's caret follows the letters typed;
+                        // the others wait at the start, so a new word's caret
+                        // appears in place instead of sliding in from the end.
+                        x: word.isCurrent ? backend.caret * view.charWidth - 1 : -1
+                        Behavior on x { enabled: backend.started && word.isCurrent; NumberAnimation { duration: 60 } }
                     }
                 }
             }
